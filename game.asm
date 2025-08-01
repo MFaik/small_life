@@ -287,10 +287,11 @@ fbpath: db "/dev/fb0",0
 tty_path: db "/dev/tty", 0
 sigact: times 4 dq 0
 signals:
+        ;dq 1   ; SIGHUP  (terminal disconnect)
         dq 2    ; SIGINT   (Ctrl+C)
-        ;dq 15   ; SIGTERM (termination signal)
         dq 3    ; SIGQUIT (Ctrl+\)
-        ;dq 1    ; SIGHUP  (terminal disconnect)
+        dq 11   ; SIGSEGV 
+        ;dq 15  ; SIGTERM (termination signal)
         dq 20   ; SIGTSTP (Ctrl+Z)
 
 filesize equ $ - $$ ; for program header
