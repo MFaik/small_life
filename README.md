@@ -1,6 +1,6 @@
 # small life
 Minimal implementation of Conway's Game of Life in x86_64 assembly.
-The program can be run on a barebones linux tty. 
+The program can be run on a barebones linux tty that has framebuffer support, check if `/dev/fb0/` exists. 
 Due to the nature of the way syscalls are used, if there is any problem on your machine, feel free to open a new issue, or if you have a great way to make the binary smaller also feel free to open a new issue. 
 ## usage
 Only NASM is needed for the compilation process. To compile the program just run,
